@@ -15,12 +15,12 @@ class Shape {
     }
 
     moveLeft(){
-        this.point.x -= this.speed;
+        this.point.x -= this.speed - ( this.point.x * (  this.speed/400 ) );
         this.direction = "left";
     }
 
     moveRight(){
-        this.point.x += this.speed;
+        this.point.x +=  this.speed - (  this.speed * ( this.point.x/400 ) );
         this.direction = "right";
     }
 

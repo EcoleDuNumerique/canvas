@@ -5,16 +5,11 @@ class ShapeFactory {
         this.lastY = 0;
     }
 
-    getRandomItem(){
+    getItem(){
 
         var color = new Color().random();
-        var element = null;
-        if( Math.round( Math.random() ) )
-            element = new Square( 0, this.lastY, color, 10 );
-        else
-            element = new Circle( 5, this.lastY + 5, color, 5 );
-
-        return element;
+        return new Circle( windowW/2, windowH/2, color, 5 );
+        
     }
 
     generate( time, max = 50 ){
@@ -23,7 +18,7 @@ class ShapeFactory {
 
             this.lastY += 12;
 
-            var element = this.getRandomItem();
+            var element = this.getItem();
         
             this.elements.push( element );
 
