@@ -14,8 +14,7 @@ class Circle extends Shape {
 
         ctx.beginPath();
         ctx.arc( this.point.x, this.point.y, this.radius, this.sAngle, this.eAngle );
-        ctx.fillStyle = this.color.toString();
-        ctx.fill();
+        super.draw( ctx );
         
     }
 

@@ -7,4 +7,9 @@ class Shape {
 
     }
 
+    draw( ctx ){
+        ctx.fillStyle = this.color.toString();
+        ctx.fill();
+    }
+
 }
