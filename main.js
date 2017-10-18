@@ -10,7 +10,7 @@ function animate(){
     ctx.clearRect( 0, 0, 800, 500 );//Effacer un rectangle donné
     
     for( var element of factory.elements ){
-        element.point.x += 5;
+        element.move(1, 300);
         element.draw( ctx );
     }
 
